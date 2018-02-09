@@ -1,0 +1,19 @@
+<a
+href="#"
+class="list-group-item clearfix"
+(click)="onSelected()">
+<div class="pull-left">
+  <h4 class="list-group-item-heading">{{ recipe.recipe_name }}</h4>
+  <p class="list-group-item-text">{{ recipe.recipe_description }}</p>
+</div>
+<span class="pull-right">
+    <!-- commentStart: src="{{ recipe.recipe_imagePath }}" : string-interpolation
+         [src]="recipe.recipe_imagePath" : property-binding
+         *ngFor="let recipe of recipes; let i = index" :commentEnd -->
+  <img
+    [src]="recipe.recipe_imagePath"
+    alt="{{ recipe.recipe_name }}"
+    class="img-responsive"
+    style="max-height: 100px;">
+</span>
+</a>
