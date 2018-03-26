@@ -14,7 +14,8 @@ class="list-group-item clearfix">
          [src]="recipe.recipe_imagePath" : property-binding
          *ngFor="let recipe of recipes; let i = index" :commentEnd -->
   <img
-    [src]="recipe.recipe_imagePath"
+
+    src="{{recipe?.recipe_imagePath}}"
     alt="{{ recipe.recipe_name }}"
     class="img-responsive"
     style="max-height: 100px;">
